@@ -3,7 +3,7 @@
     <th>name</th>
     <th>price</th>
   </tr>
-  <tr *ngFor="let product of products" (click)="selectProduct.emit(product.id)">
+  <tr class="product" *ngFor="let product of products" [ngClass]="{'selected': isSelected(product.id)}" (click)="handleSelectProduct(product.id)">
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
   </tr>

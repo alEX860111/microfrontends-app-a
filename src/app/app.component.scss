@@ -1,3 +1,20 @@
 table {
-  border: 1px solid grey;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product {
+  cursor: pointer;
+}
+
+.product:hover {background-color:#f5f5f5;}
+
+.product.selected {
+  background-color: darken(#f5f5f5, 10%);
 }

@@ -18,4 +18,15 @@ export class AppComponent {
   @Output()
   selectProduct = new EventEmitter<number>();
 
+  selectedProductId: number;
+
+  handleSelectProduct(id: number) {
+    this.selectedProductId = id;
+    this.selectProduct.emit(id);
+  }
+
+  isSelected(id: number) {
+    return id === this.selectedProductId;
+  }
+
 }
